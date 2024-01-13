@@ -1,0 +1,66 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Ajustes adicionales para la barra lateral (aside) */
+aside {
+    background-color: #e3e3e3;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Ajustes para los enlaces */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4CAF50;
+}
