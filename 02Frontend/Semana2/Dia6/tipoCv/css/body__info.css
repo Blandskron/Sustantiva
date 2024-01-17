@@ -1,0 +1,170 @@
+body {
+    background-color: #202020;
+    font-family: 'Questrial', sans-serif;
+  }
+ 
+.body__info {
+    
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
+
+.title_info {
+    padding: 50px;
+}
+
+.menu__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social__menu {
+    color: #FFFF00;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.social__menu:hover {
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+div.imagen {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.imagen img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pAbout {
+    padding: 7px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Skills {
+    background-color: #202020;
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Soft {
+    padding: 7px;
+}
+
+.liSoft {
+    padding: 7px;
+}
+
+.Hard {
+    padding: 7px;
+}
+
+.Skill_img {
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px;
+    width: 80%;
+}
+
+.liHard {
+    padding: 7px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GTM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.GTMTime {
+    padding: 2px;
+}
+
+@media(max-width: 769px) {
+
+    .body__info {
+        padding: 10px;
+    }
+    
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .title_info {
+        padding: 20px;
+    }
+
+    .menu__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .pAbout {
+        padding: 7px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .Soft {
+        padding: 7px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .liHard {
+        padding: 7px;
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
