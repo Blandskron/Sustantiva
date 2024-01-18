@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas con jQuery y Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Lista de Tareas</h2>
+        <input type="text" id="nuevaTarea" class="form-control" placeholder="Añade una nueva tarea">
+        <button id="botonAgregar" class="btn btn-primary mt-2">Agregar Tarea</button>
+        
+        <ul id="listaTareas" class="list-group mt-3">
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#botonAgregar").click(function(){
+                var tarea = $("#nuevaTarea").val();
+                if(tarea) {
+                    $("#listaTareas").append('<li class="list-group-item">' + tarea + 
+                                             '<button class="btn btn-danger btn-sm float-right eliminar">Eliminar</button>' +
+                                             '</li>');
+                    $("#nuevaTarea").val('');
+                }
+            });
+
+            $("#listaTareas").on('click', '.eliminar', function(){
+                $(this).parent().remove();
+            });
+        });
+    </script>
+
+</body>
+</html>

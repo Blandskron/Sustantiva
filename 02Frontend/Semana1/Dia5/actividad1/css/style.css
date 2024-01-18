@@ -1,0 +1,56 @@
+/* Estilos generales para todo el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la tipografía */
+    line-height: 1.6; /* Espaciado entre líneas */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para el encabezado (header) */
+header {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    padding: 10px 0; /* Espaciado interno */
+}
+
+/* Estilos para la navegación (nav) */
+nav {
+    background-color: #444; /* Color de fondo */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los estilos de lista predeterminados */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Distribuye los elementos de la lista horizontalmente */
+}
+
+/* Estilos para los elementos de la lista */
+nav ul li {
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para los enlaces */
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilos para la sección (section) y el artículo (article) */
+section, article {
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    padding: 10px 0; /* Espaciado interno */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 0; /* Ubicación en la parte inferior */
+    width: 100%; /* Ancho completo */
+}
