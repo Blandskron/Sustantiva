@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .estiloNuevo {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleButton">Mostrar/Ocultar</button>
+    <p id="textoEjemplo">Este es un párrafo para mostrar y ocultar.</p>
+
+    <button id="slideButton">Deslizar</button>
+    <div id="panel">Panel Deslizable</div>
+
+    <div id="contenidoDinamico"></div>
+    <button id="cargarContenido">Cargar Contenido</button>
+
+    <input type="text" id="nombreInput" placeholder="Introduce tu nombre">
+    <button id="submitNombre">Enviar</button>
+
+    <p id="textoClase">Texto con estilo cambiante.</p>
+    <button id="cambiarEstilo">Cambiar Estilo</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#toggleButton").click(function(){
+                $("#textoEjemplo").toggle();
+            });
+
+            $("#slideButton").click(function(){
+                $("#panel").slideToggle();
+            });
+
+            $("#cargarContenido").click(function(){
+                $("#contenidoDinamico").load("ruta/al/contenido.html");
+            });
+
+            $("#submitNombre").click(function(){
+                var nombre = $("#nombreInput").val();
+                alert("Hola, " + nombre);
+            });
+
+            $("#cambiarEstilo").click(function(){
+                $("#textoClase").toggleClass("estiloNuevo");
+            });
+        });
+    </script>
+
+</body>
+</html>
