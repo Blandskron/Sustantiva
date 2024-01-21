@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptación y Desencriptación de Frases</title>
+</head>
+<body>
+
+<h2>Encriptación y Desencriptación de Frases</h2>
+
+<label for="inputText">Frase:</label>
+<input type="text" id="inputText">
+<button onclick="encriptar()">Encriptar</button>
+<button onclick="desencriptar()">Desencriptar</button>
+
+<p id="resultado"></p>
+
+<script>
+function encriptar() {
+  // Obtén el valor del campo de texto
+  var fraseOriginal = document.getElementById('inputText').value;
+
+  // Llave para la encriptación (puede ser más complejo en un caso real)
+  var llave = 3;
+
+  // Encriptación simple: desplaza cada carácter en la cadena según la llave
+  var fraseEncriptada = "";
+  for (var i = 0; i < fraseOriginal.length; i++) {
+    var charCode = fraseOriginal.charCodeAt(i);
+    if (charCode >= 65 && charCode <= 90) {  // Mayúsculas
+      fraseEncriptada += String.fromCharCode((charCode - 65 + llave) % 26 + 65);
+    } else if (charCode >= 97 && charCode <= 122) {  // Minúsculas
+      fraseEncriptada += String.fromCharCode((charCode - 97 + llave) % 26 + 97);
+    } else {
+      fraseEncriptada += fraseOriginal[i];  // Mantener caracteres no alfabéticos sin cambios
+    }
+  }
+
+  // Muestra el resultado
+  document.getElementById('resultado').textContent = "Frase Encriptada: " + fraseEncriptada;
+}
+
+function desencriptar() {
+  // Obtén el valor del campo de texto encriptado
+  var fraseEncriptada = document.getElementById('inputText').value;
+
+  // Llave para la desencriptación (debe ser la misma que la usada para encriptar)
+  var llave = 3;
+
+  // Desencriptación simple: deshace el desplazamiento de cada carácter
+  var fraseOriginal = "";
+  for (var i = 0; i < fraseEncriptada.length; i++) {
+    var charCode = fraseEncriptada.charCodeAt(i);
+    if (charCode >= 65 && charCode <= 90) {  // Mayúsculas
+      fraseOriginal += String.fromCharCode((charCode - 65 - llave + 26) % 26 + 65);
+    } else if (charCode >= 97 && charCode <= 122) {  // Minúsculas
+      fraseOriginal += String.fromCharCode((charCode - 97 - llave + 26) % 26 + 97);
+    } else {
+      fraseOriginal += fraseEncriptada[i];  // Mantener caracteres no alfabéticos sin cambios
+    }
+  }
+
+  // Muestra el resultado
+  document.getElementById('resultado').textContent = "Frase Desencriptada: " + fraseOriginal;
+}
+</script>
+
+</body>
+</html>
