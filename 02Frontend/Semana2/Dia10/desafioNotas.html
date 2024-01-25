@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Finales</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #info {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Notas Finales</h1>
+
+    <div id="info">
+        <!-- Información del estudiante (será llenada dinámicamente) -->
+        <p>Nombre: <span id="nombre"></span></p>
+        <p>Carrera: <span id="carrera">Ingeniería en Informática</span></p>
+    </div>
+
+    <table id="notasTable">
+        <!-- Encabezados de la tabla -->
+        <tr>
+            <th>Ramo</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Promedio</th>
+        </tr>
+        <!-- Fila HTML -->
+        <tr>
+            <td>HTML</td>
+            <td id="htmlNota1"></td>
+            <td id="htmlNota2"></td>
+            <td id="htmlNota3"></td>
+            <td id="htmlPromedio"></td>
+        </tr>
+        <!-- Fila CSS -->
+        <tr>
+            <td>CSS</td>
+            <td id="cssNota1"></td>
+            <td id="cssNota2"></td>
+            <td id="cssNota3"></td>
+            <td id="cssPromedio"></td>
+        </tr>
+        <!-- Fila JavaScript -->
+        <tr>
+            <td>JavaScript</td>
+            <td id="jsNota1"></td>
+            <td id="jsNota2"></td>
+            <td id="jsNota3"></td>
+            <td id="jsPromedio"></td>
+        </tr>
+    </table>
+
+    <button onclick="ingresarNotas()">Ingresar Notas</button>
+
+    <script>
+        // JavaScript
+        // Solicitar el nombre al usuario y mostrarlo dinámicamente
+        var nombreUsuario = prompt("Ingrese su nombre");
+        document.getElementById('nombre').innerText = nombreUsuario || 'Nombre no ingresado';
+
+        // Información sobre la carrera (no cambia)
+        document.getElementById('carrera').innerText = 'Ingeniería en Informática';
+
+        function ingresarNotas() {
+            ingresarNotasPorRamo('HTML');
+            ingresarNotasPorRamo('CSS');
+            ingresarNotasPorRamo('JS');
+        }
+
+        function ingresarNotasPorRamo(ramo) {
+            var nota1 = parseFloat(prompt(`Ingrese la nota 1 para ${ramo}`));
+            var nota2 = parseFloat(prompt(`Ingrese la nota 2 para ${ramo}`));
+            var nota3 = parseFloat(prompt(`Ingrese la nota 3 para ${ramo}`));
+
+            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                alert("Por favor, ingrese valores numéricos válidos.");
+            } else {
+                document.getElementById(`${ramo.toLowerCase()}Nota1`).innerText = nota1;
+                document.getElementById(`${ramo.toLowerCase()}Nota2`).innerText = nota2;
+                document.getElementById(`${ramo.toLowerCase()}Nota3`).innerText = nota3;
+
+                var promedio = (nota1 + nota2 + nota3) / 3;
+                document.getElementById(`${ramo.toLowerCase()}Promedio`).innerText = promedio.toFixed(2);
+            }
+        }
+    </script>
+
+</body>
+</html>
