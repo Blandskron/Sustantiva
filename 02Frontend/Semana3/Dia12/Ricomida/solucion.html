@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Carousel y jQuery</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    .carousel-item img {
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Carousel -->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img1.jpg" class="d-block w-100" alt="...">
+        <img src="img2.jpg" class="d-block w-100" alt="...">
+        <img src="img3.jpg" class="d-block w-100" alt="...">
+        <img src="img4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img5.jpg" class="d-block w-100" alt="...">
+        <img src="img6.jpg" class="d-block w-100" alt="...">
+        <img src="img7.jpg" class="d-block w-100" alt="...">
+        <img src="img8.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón con Tooltip -->
+  <button id="enviarCorreo" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Enviar por correo">Enviar por correo</button>
+
+  <!-- Recetas Relacionadas -->
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Receta 1
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        Contenido de la Receta 1
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Receta 2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Contenido de la Receta 2
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Receta 3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        Contenido de la Receta 3
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      // Ocultar Carousel en sm y xs
+      $('#carouselExampleControls').on('slide.bs.carousel', function () {
+        var winWidth = $(window).width();
+        if (winWidth < 576) {
+          $(this).hide();
+        }
+      });
+
+      // Tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Evento Click
+      $('#enviarCorreo').click(function(){
+        alert('El correo fue enviado correctamente...');
+      });
+
+      // Evento dblclick
+      $('h5').on('dblclick', function(){
+        $(this).css('color', 'red');
+      });
+
+      // Toggle contenido de tarjetas
+      $('.card-header').click(function(){
+        $(this).next('.collapse').toggle();
+      });
+    });
+  </script>
+</body>
+</html>
