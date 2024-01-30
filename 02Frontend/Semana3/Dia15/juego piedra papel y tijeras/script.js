@@ -1,6 +1,6 @@
 function playGame(playerChoice) {
     // Array de opciones para la computadora
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ['piedra', 'papel', 'tijeras'];
     // Genera una elección aleatoria para la computadora
     const computerChoice = choices[Math.floor(Math.random() * 3)];
 
@@ -9,9 +9,9 @@ function playGame(playerChoice) {
     if (playerChoice === computerChoice) {
         result = 'Empate!';
     } else if (
-        (playerChoice === 'rock' && computerChoice === 'scissors') ||
-        (playerChoice === 'paper' && computerChoice === 'rock') ||
-        (playerChoice === 'scissors' && computerChoice === 'paper')
+        (playerChoice === 'piedra' && computerChoice === 'tijeras') ||
+        (playerChoice === 'papel' && computerChoice === 'piedra') ||
+        (playerChoice === 'tijeras' && computerChoice === 'papel')
     ) {
         result = '¡Ganaste!';
     } else {
