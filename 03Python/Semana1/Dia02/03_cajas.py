@@ -18,11 +18,13 @@ def determinar_contenido(caja_a):
     
     return contenido_caja_a, contenido_caja_b, contenido_caja_c
 
-# Prueba del algoritmo
+# Solicitar al usuario que ingrese el contenido de la Caja A y convertir la entrada a minúsculas
 caja_a = input("Ingresa el contenido de la Caja A (tornillos, tuercas, tornillos y tuercas): ").lower()
 
+# Llamar a la función determinar_contenido y desempaquetar los resultados
 contenido_caja_a, contenido_caja_b, contenido_caja_c = determinar_contenido(caja_a)
 
+# Imprimir el contenido de las cajas
 print("Contenido de la Caja A:", contenido_caja_a)
 print("Contenido de la Caja B:", contenido_caja_b)
 print("Contenido de la Caja C:", contenido_caja_c)
