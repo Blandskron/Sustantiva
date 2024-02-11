@@ -1,7 +1,7 @@
 from pytube import YouTube
 
 # URL del video de YouTube que deseas descargar
-url = 'Link aqui'
+url = 'https://www.youtube.com/watch?v=_Ok4p5CI5tw'
 
 try:
     # Crear un objeto YouTube
