@@ -1,11 +1,23 @@
 def obtener_maximo(lista):
-    """Esta función recibe una lista de números y devuelve el máximo."""
+    """
+    Esta función recibe una lista de números y devuelve el máximo.
+    
+    Parámetros:
+    lista (list): Una lista de números enteros o flotantes.
+    
+    Retorna:
+    int o float: El número máximo de la lista. Si la lista está vacía, retorna None.
+    """
     if not lista:
         return None  # Devuelve None si la lista está vacía
-    maximo = lista[0]
+    
+    maximo = lista[0]  # Asigna el primer elemento de la lista como máximo inicialmente
+    
+    # Itera sobre cada elemento de la lista para encontrar el máximo
     for num in lista:
         if num > maximo:
-            maximo = num
+            maximo = num  # Actualiza el máximo si encuentra un número mayor
+    
     return maximo
 
 # Ejemplo de uso:
