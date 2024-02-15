@@ -1,17 +1,17 @@
-function playGame(playerChoice) {
+function playGame(seleccionJugador) {
     // Array de opciones para la computadora
-    const choices = ['piedra', 'papel', 'tijeras'];
+    const seleccion = ['piedra', 'papel', 'tijeras'];
     // Genera una elección aleatoria para la computadora
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
+    const eleccionComputadora = seleccion[Math.floor(Math.random() * 3)];
 
     // Determina el resultado del juego
     let result = '';
-    if (playerChoice === computerChoice) {
+    if (seleccionJugador === eleccionComputadora) {
         result = 'Empate!';
     } else if (
-        (playerChoice === 'piedra' && computerChoice === 'tijeras') ||
-        (playerChoice === 'papel' && computerChoice === 'piedra') ||
-        (playerChoice === 'tijeras' && computerChoice === 'papel')
+        (seleccionJugador === 'piedra' && eleccionComputadora === 'tijeras') ||
+        (seleccionJugador === 'papel' && eleccionComputadora === 'piedra') ||
+        (seleccionJugador === 'tijeras' && eleccionComputadora === 'papel')
     ) {
         result = '¡Ganaste!';
     } else {
@@ -19,5 +19,5 @@ function playGame(playerChoice) {
     }
 
     // Muestra el resultado en la interfaz
-    document.getElementById('result').innerHTML = `Elegiste ${playerChoice}. La computadora eligió ${computerChoice}. ${result}`;
+    document.getElementById('result').innerHTML = `Elegiste ${seleccionJugador}. La computadora eligió ${eleccionComputadora}. ${result}`;
 }
