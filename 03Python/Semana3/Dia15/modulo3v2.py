@@ -1,49 +1,52 @@
 class GestorTareas:
     def __init__(self):
-        self.tareas = []
+        self.tareas = []  # Inicializa una lista vacía para almacenar tareas
 
     def agregar_tarea(self, tarea):
-        self.tareas.append(tarea)
-        print("Tarea agregada correctamente.")
+        self.tareas.append(tarea)  # Agrega una nueva tarea a la lista
+        print("Tarea agregada correctamente.")  # Muestra un mensaje de confirmación
 
     def mostrar_tareas(self):
-        if self.tareas:
+        if self.tareas:  # Verifica si hay tareas en la lista
             print("Lista de tareas:")
-            for tarea in self.tareas:
+            for tarea in self.tareas:  # Itera sobre las tareas y las muestra
                 print("-", tarea)
         else:
-            print("No hay tareas en el gestor.")
+            print("No hay tareas en el gestor.")  # Muestra un mensaje si no hay tareas
+
 
 class EvaluadorRendimiento:
     def __init__(self):
-        self.calificaciones = {}
+        self.calificaciones = {}  # Inicializa un diccionario para almacenar calificaciones
 
     def agregar_calificacion(self, estudiante, calificacion):
-        self.calificaciones[estudiante] = calificacion
+        self.calificaciones[estudiante] = calificacion  # Agrega una nueva calificación al diccionario
 
     def mostrar_calificaciones(self):
-        if self.calificaciones:
+        if self.calificaciones:  # Verifica si hay calificaciones en el diccionario
             print("Calificaciones de estudiantes:")
-            for estudiante, calificacion in self.calificaciones.items():
+            for estudiante, calificacion in self.calificaciones.items():  # Muestra las calificaciones
                 print(f"{estudiante}: {calificacion}")
         else:
-            print("No hay calificaciones registradas.")
+            print("No hay calificaciones registradas.")  # Muestra un mensaje si no hay calificaciones
+
 
 class RegistroContactos:
     def __init__(self):
-        self.contactos = {}
+        self.contactos = {}  # Inicializa un diccionario para almacenar contactos
 
     def agregar_contacto(self, nombre, telefono):
-        self.contactos[nombre] = telefono
-        print("Contacto agregado correctamente.")
+        self.contactos[nombre] = telefono  # Agrega un nuevo contacto al diccionario
+        print("Contacto agregado correctamente.")  # Muestra un mensaje de confirmación
 
     def mostrar_contactos(self):
-        if self.contactos:
+        if self.contactos:  # Verifica si hay contactos en el diccionario
             print("Lista de contactos:")
-            for nombre, telefono in self.contactos.items():
+            for nombre, telefono in self.contactos.items():  # Muestra los contactos
                 print(f"Nombre: {nombre}, Teléfono: {telefono}")
         else:
-            print("No hay contactos registrados.")
+            print("No hay contactos registrados.")  # Muestra un mensaje si no hay contactos
+
 
 class CalculadoraAvanzada:
     def sumar(self, a, b):
@@ -61,11 +64,12 @@ class CalculadoraAvanzada:
         else:
             return "Error: División por cero"
 
+
 # Instanciar las clases
-gestor_tareas = GestorTareas()
-evaluador_rendimiento = EvaluadorRendimiento()
-registro_contactos = RegistroContactos()
-calculadora = CalculadoraAvanzada()
+gestor_tareas = GestorTareas()  # Instancia del Gestor de Tareas
+evaluador_rendimiento = EvaluadorRendimiento()  # Instancia del Evaluador de Rendimiento
+registro_contactos = RegistroContactos()  # Instancia del Registro de Contactos
+calculadora = CalculadoraAvanzada()  # Instancia de la Calculadora Avanzada
 
 # Menú de opciones para el usuario
 while True:

@@ -1,16 +1,24 @@
-import tkinter as tk
-from tkinter import messagebox
+import tkinter as tk  # Importa la biblioteca tkinter para crear la interfaz gráfica
+from tkinter import messagebox  # Importa el módulo messagebox de tkinter para mostrar mensajes emergentes
 
 class GestorTareasApp:
     def __init__(self, root):
+        """
+        Constructor de la clase GestorTareasApp.
+
+        Args:
+        - root: La ventana principal de la aplicación.
+        """
         self.root = root
-        self.root.title("Gestor de Tareas")
+        self.root.title("Gestor de Tareas")  # Establece el título de la ventana
 
-        self.tareas = {}
+        self.tareas = {}  # Inicializa un diccionario para almacenar las tareas
 
+        # Crea un marco dentro de la ventana principal
         self.frame = tk.Frame(self.root)
         self.frame.pack(padx=20, pady=20)
 
+        # Crea etiquetas y campos de entrada para ingresar el nombre, fecha de vencimiento y prioridad de las tareas
         self.label_nombre = tk.Label(self.frame, text="Nombre de la tarea:")
         self.label_nombre.grid(row=0, column=0, sticky="w")
         self.entry_nombre = tk.Entry(self.frame)
@@ -26,6 +34,7 @@ class GestorTareasApp:
         self.entry_prioridad = tk.Entry(self.frame)
         self.entry_prioridad.grid(row=2, column=1)
 
+        # Crea botones para agregar y mostrar tareas
         self.button_agregar = tk.Button(self.frame, text="Agregar Tarea", command=self.agregar_tarea)
         self.button_agregar.grid(row=3, column=0, columnspan=2, pady=10)
 
@@ -33,18 +42,26 @@ class GestorTareasApp:
         self.button_mostrar.grid(row=4, column=0, columnspan=2, pady=10)
 
     def agregar_tarea(self):
+        """
+        Método para agregar una nueva tarea.
+        Obtiene los datos ingresados por el usuario y los agrega al diccionario de tareas.
+        """
         nombre = self.entry_nombre.get()
         fecha = self.entry_fecha.get()
         prioridad = self.entry_prioridad.get()
 
-        if nombre and fecha and prioridad:
+        if nombre and fecha and prioridad:  # Verifica que todos los campos estén completos
             self.tareas[nombre] = {"Fecha de vencimiento": fecha, "Prioridad": prioridad}
             messagebox.showinfo("Tarea Agregada", f"Tarea '{nombre}' agregada con éxito.")
         else:
             messagebox.showwarning("Campos Vacíos", "Por favor complete todos los campos.")
 
     def mostrar_tareas(self):
-        if self.tareas:
+        """
+        Método para mostrar todas las tareas agregadas.
+        Muestra los detalles de cada tarea en un mensaje emergente.
+        """
+        if self.tareas:  # Verifica si hay tareas registradas
             tarea_texto = ""
             for nombre, detalles in self.tareas.items():
                 tarea_texto += f"Nombre: {nombre}, Fecha de vencimiento: {detalles['Fecha de vencimiento']}, Prioridad: {detalles['Prioridad']}\n"
@@ -53,6 +70,6 @@ class GestorTareasApp:
             messagebox.showinfo("Tareas", "No hay tareas registradas.")
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = GestorTareasApp(root)
-    root.mainloop()
+    root = tk.Tk()  # Crea la ventana principal de la aplicación
+    app = GestorTareasApp(root)  # Crea una instancia de la aplicación de gestión de tareas
+    root.mainloop()  # Inicia el bucle principal de la aplicación para que la interfaz sea interactiva

@@ -30,7 +30,6 @@ def guardar_tareas(nombre_archivo, lista_tareas):
     except IOError:
         print("Error al guardar las tareas en el archivo.")
 
-
 # Lista para almacenar las tareas
 tareas = []
 
