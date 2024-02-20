@@ -13,3 +13,4 @@ def listPrimes(max):
             foundPrimes.append(n)
     return foundPrimes
     
+print(f'primes.py module name is {__name__}')
