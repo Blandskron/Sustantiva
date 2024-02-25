@@ -1,10 +1,25 @@
 class Estrella:
     def __init__(self, nombre, tipo):
+        """
+        Constructor de la clase Estrella.
+
+        Args:
+        - nombre (str): El nombre de la estrella.
+        - tipo (str): El tipo de la estrella.
+        """
         self.nombre = nombre
         self.tipo = tipo
 
     class Planeta:
         def __init__(self, nombre, masa, distancia):
+            """
+            Constructor de la clase Planeta.
+
+            Args:
+            - nombre (str): El nombre del planeta.
+            - masa (str): La masa del planeta.
+            - distancia (str): La distancia del planeta a la estrella.
+            """
             self.nombre = nombre
             self.masa = masa
             self.distancia = distancia
