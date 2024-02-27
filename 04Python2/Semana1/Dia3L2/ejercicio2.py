@@ -10,7 +10,7 @@ class CuentaBancaria:
     def depositar(self, cantidad):
         self.saldo += cantidad  # Incrementa el saldo de la cuenta con la cantidad depositada
         # Muestra un mensaje indicando la cantidad depositada y el saldo actual de la cuenta
-        print(f"Se depositaron {cantidad} euros en la cuenta. Saldo actual: {self.saldo} euros.")
+        print(f"Se depositaron {cantidad} euros en la cuenta. Saldo actual: {self.saldo} euros")
 
     # Método para retirar dinero de la cuenta
     def retirar(self, cantidad):
