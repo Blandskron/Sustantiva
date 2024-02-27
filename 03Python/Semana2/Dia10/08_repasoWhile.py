@@ -14,7 +14,7 @@ numero = 1
 
 while numero <= 10:
     print(numero)
-    numero= numero + 1
+    numero = numero +1
 
 #Sumatoria de los números del 1 al 10
 sumatoria = 0
@@ -22,6 +22,6 @@ numero = 1
 
 while numero <= 10:
     sumatoria = sumatoria + numero   
-    numero= numero + 1
+    numero = numero + 1
 
 print("La sumatoria es: ",sumatoria)
