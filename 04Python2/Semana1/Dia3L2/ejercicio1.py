@@ -1,4 +1,3 @@
-# Definición de la clase Persona
 class Persona:
     # Método constructor (__init__) que inicializa los atributos nombre, edad y altura
     def __init__(self, nombre, edad, altura):
