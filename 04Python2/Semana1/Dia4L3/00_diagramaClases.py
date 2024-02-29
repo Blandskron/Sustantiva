@@ -33,7 +33,7 @@ class Profesor(Persona):
 
 # Creación de instancias de las clases
 estudiante1 = Estudiante("Juan", 20, "Python")
-profesor1 = Profesor("María", 35, "Informática")
+profesor1 = Profesor("María", 35, "Informática.")
 
 # Acceso a los métodos y atributos de las clases
 print("Nombre del estudiante:", estudiante1.obtener_nombre())
