@@ -44,4 +44,3 @@ insert into bandas_discos (nombre_banda, nombre_disco, anio_disco) values ('The 
 insert into bandas_discos (nombre_banda, nombre_disco, anio_disco) values ('Modeslektor', 'Hello Mom!', 2005);
 insert into bandas_discos (nombre_banda, nombre_disco, anio_disco) values ('Modeslektor', 'Monkeytown', 2011);
 insert into bandas_discos (nombre_banda, nombre_disco, anio_disco) values ('Modeslektor', 'Who Else', 2019);
-

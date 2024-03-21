@@ -25,3 +25,24 @@ FROM
     WHERE 
         Empleado.PrimerApellido = 'Perez'
 ) AS ProyectosPerez;
+
+
+SELECT DISTINCT NumProyecto AS NumeroProyecto
+FROM Proyecto
+WHERE Numero IN (
+    SELECT NumProyecto
+    FROM TrabajaEn
+    WHERE RutEmpleado IN (
+        SELECT Rut
+        FROM Empleado
+        WHERE PrimerApellido = 'Perez'
+    )
+) OR Numero IN (
+    SELECT Proyecto.Numero
+    FROM Departamento
+    WHERE RutGerente IN (
+        SELECT Rut
+        FROM Empleado
+        WHERE PrimerApellido = 'Perez'
+    )
+);
