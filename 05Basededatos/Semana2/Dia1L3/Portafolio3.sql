@@ -11,6 +11,7 @@ UPDATE Empleados SET salario = nuevo_salario WHERE ID_empleado = 1;
 
 --Borrar la información de un empleado específico suponiendo que el ID_empleado sea 2:
 DELETE FROM Empleados WHERE ID_empleado = 2;
+DELETE FROM Empleados WHERE ID_empleado IN (17, 18, 19);
 
 --Insertar nueva información de un empleado:
 INSERT INTO Empleados (ID_empleado, nombre, apellido, salario) VALUES
@@ -18,6 +19,8 @@ INSERT INTO Empleados (ID_empleado, nombre, apellido, salario) VALUES
 
 --Utilizar una secuencia para asignar identificadores suponiendo que hay una secuencia llamada "seq_empleados":
 CREATE SEQUENCE seq_empleados START WITH 1 INCREMENT BY 1;
+INSERT INTO Empleados (ID_empleado, nombre, apellido, salario)
+VALUES (NEXTVAL('seq_empleados'), 'Juan', 'Perez', 5000);
 
 --Luego, al insertar datos, no necesitas proporcionar un valor para ID_empleado, se generará automáticamente usando la secuencia.
 --Insertar datos manteniendo la integridad referencial suponiendo que hay una tabla relacionada llamada "Departamento":
