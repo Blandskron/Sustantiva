@@ -1,3 +1,60 @@
+CREATE TABLE Ciudades (
+	ID_ciudad INT PRIMARY KEY,
+	nombre VARCHAR(50)
+);
+
+CREATE TABLE Clientes (
+	ID_cliente INT PRIMARY KEY,
+	nombre VARCHAR(50),
+	apellido VARCHAR(50),
+	ID_ciudad INT,
+	FOREIGN KEY (ID_ciudad) REFERENCES Ciudades(ID_ciudad)
+);
+
+ALTER TABLE Clientes
+ADD email VARCHAR(50);
+
+ALTER TABLE Clientes 
+ALTER COLUMN email DROP NOT NULL;
+
+DELETE FROM Clientes WHERE ID_cliente = 104;
+
+ALTER TABLE Clientes 
+ALTER COLUMN apellido SET NOT NULL;
+
+ALTER TABLE Clientes 
+ALTER COLUMN apellido DROP NOT NULL;
+
+INSERT INTO Ciudade (ID_ciudad, nombre) VALUES
+(1, 'Santiago'),
+(2, 'Talca'),
+(3, 'Curico')
+
+INSERT INTO Clientes (ID_Cliente, nombre, apellido, ID_ciudad, email) VALUES
+(104, 'Guillermo', 'Garcia', 2, NULL)
+
+DROP TABLE IF EXISTS Empleados;
+
+CREATE TABLE Empleados (
+	ID_empleado INT PRIMARY KEY,
+	nombre VARCHAR(50)
+)
+
+TRUNCATE TABLE Clientes;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --Crear una tabla llamada "Clientes" con los siguientes campos:
 CREATE TABLE Clientes (
     ID_cliente INT PRIMARY KEY,
