@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS bandas;
 CREATE TABLE bandas
 (
-    nombre character varying(50)
+    nombre character varying(50),
     pais character varying(50)
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE bandas_discos
     nombre_disco character varying(50),
     nombre_banda character varying(50),
     anio_disco integer
-)
+);
 
 insert into bandas_discos (nombre_banda, nombre_disco, anio_disco) values ('Kraftwerk', 'Computer World', 1981);
 insert into bandas_discos (nombre_banda, nombre_disco, anio_disco) values ('Kraftwerk', 'The Man Machine', 1978);
