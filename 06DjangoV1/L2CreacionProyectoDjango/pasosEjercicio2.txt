@@ -47,9 +47,9 @@ echo "<!DOCTYPE html>
 </head>
 <body>
     <h1>Template 1</h1>
-    <form action='{% url \"template2\" %}' method='get'>
-        <button type='submit'>Ir al Template 2</button>
-    </form>
+    <ul>
+        <li><a href="{% url 'template2' %}">Ir al Template 2</a></li>
+    </ul>
 </body>
 </html>" > myhelloapp/templates/template1.html
 
@@ -63,9 +63,9 @@ echo "<!DOCTYPE html>
 </head>
 <body>
     <h1>Template 2</h1>
-    <form action='{% url \"template1\" %}' method='get'>
-        <button type='submit'>Ir al Template 1</button>
-    </form>
+    <ul>
+        <li><a href="{% url 'template1' %}">Ir al Template 1</a></li>
+    </ul>
 </body>
 </html>" > myhelloapp/templates/template2.html
 
