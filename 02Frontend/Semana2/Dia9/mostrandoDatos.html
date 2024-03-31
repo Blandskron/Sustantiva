@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualización de Tipos de Variables en JavaScript</title>
+</head>
+<body>
+
+    <h2>Visualización de Tipos de Variables en JavaScript</h2>
+
+    <p><strong>String:</strong> <span id="stringValue"></span></p>
+    <p><strong>Number:</strong> <span id="numberValue"></span></p>
+    <p><strong>Boolean:</strong> <span id="booleanValue"></span></p>
+    <p><strong>Object:</strong> <span id="objectValue"></span></p>
+    <p><strong>Array:</strong> <span id="arrayValue"></span></p>
+    <p><strong>Function:</strong> <span id="functionValue"></span></p>
+    <p><strong>Null:</strong> <span id="nullValue"></span></p>
+    <p><strong>Undefined:</strong> <span id="undefinedValue"></span></p>
+
+    <script>
+        // String
+        var myString = "Hola, soy un texto.";
+        document.getElementById("stringValue").innerText = myString;
+
+        // Number
+        var myNumber = 100;
+        document.getElementById("numberValue").innerText = myNumber;
+
+        // Boolean
+        var myBoolean = true;
+        document.getElementById("booleanValue").innerText = myBoolean;
+
+        // Object
+        var myObject = {name: "Juan", age: 30};
+        document.getElementById("objectValue").innerText = JSON.stringify(myObject);
+
+        // Array
+        var myArray = [10, 20, 30, "cuarenta"];
+        document.getElementById("arrayValue").innerText = myArray.join(", ");
+
+        // Function
+        var myFunction = function() {
+            return "¡Hola desde la función!";
+        };
+        document.getElementById("functionValue").innerText = myFunction();
+
+        // Null
+        var myNull = null;
+        document.getElementById("nullValue").innerText = myNull;
+
+        // Undefined
+        var myUndefined;
+        document.getElementById("undefinedValue").innerText = myUndefined;
+    </script>
+
+</body>
+</html>

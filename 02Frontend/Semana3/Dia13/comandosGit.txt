@@ -1,0 +1,131 @@
+git init:
+Inicia un nuevo repositorio Git en el directorio actual.
+
+git clone <URL>:
+Clona un repositorio remoto en tu máquina local.
+
+git add <archivo>:
+Agrega cambios en un archivo al área de preparación.
+
+git commit -m "mensaje":
+Registra los cambios en el repositorio con un mensaje descriptivo.
+
+git status:
+Muestra el estado de los archivos en tu directorio de trabajo y en el área de preparación.
+
+git log:
+Muestra un registro de todos los commits en la rama actual.
+
+git branch:
+Muestra una lista de ramas y resalta la rama actual.
+
+git checkout <rama>:
+Cambia a la rama especificada.
+
+git merge <rama>:
+Combina los cambios de una rama en la rama actual.
+
+git pull:
+Obtiene los cambios más recientes desde el repositorio remoto y los fusiona en tu rama local.
+
+git push:
+Sube los cambios locales al repositorio remoto.
+
+git remote -v:
+Muestra las URL de los repositorios remotos configurados.
+
+git diff:
+Muestra las diferencias entre el directorio de trabajo y la última versión almacenada.
+
+git reset <archivo>:
+Deshace los cambios en un archivo en el área de preparación.
+
+git rm <archivo>:
+Elimina un archivo del repositorio y del directorio de trabajo.
+
+git remote add <nombre> <URL>:
+Agrega un nuevo repositorio remoto con un nombre específico.
+
+git fetch:
+Recupera cambios del repositorio remoto sin fusionarlos en tu rama local.
+
+git branch -d <rama>:
+Elimina la rama especificada.
+
+git branch -m <nombre_nuevo>:
+Cambia el nombre de la rama actual.
+
+git log --oneline:
+Muestra un registro más compacto de los commits.
+
+git log --graph --oneline --all:
+Muestra un gráfico visual de todas las ramas y sus commits.
+
+git tag -a <nombre> -m "mensaje":
+Etiqueta un commit específico con un nombre y un mensaje descriptivo.
+
+git stash:
+Guarda temporalmente cambios no comprometidos para trabajar en otra cosa.
+
+git remote show <nombre>:
+Muestra información detallada sobre un repositorio remoto.
+
+git config --global user.name "Tu Nombre":
+Configura tu nombre de usuario a nivel global.
+
+git config --global user.email "tu@email.com":
+Configura tu dirección de correo electrónico a nivel global.
+
+git grep "patrón":
+Busca patrones en los archivos del directorio de trabajo.
+
+git rebase <rama>:
+Reorganiza la historia del commit para que parezca que has aplicado tus cambios en la parte superior de la rama especificada.
+
+git cherry-pick <commit>:
+Aplica un commit específico desde otra rama a la rama actual.
+
+git submodule init:
+Inicializa los submódulos en el repositorio.
+
+git clean -n:
+Muestra qué archivos se eliminarían con git clean sin realmente eliminarlos. Útil para ver qué archivos no están bajo seguimiento de Git.
+
+git clean -f:
+Elimina los archivos no rastreados del directorio de trabajo. Úsalo con precaución, ya que eliminará archivos de forma permanente.
+
+git remote rm <nombre>:
+Elimina un repositorio remoto.
+
+git remote rename <nombre_viejo> <nombre_nuevo>:
+Cambia el nombre de un repositorio remoto.
+
+git log --author="nombre":
+Muestra los commits realizados por un autor específico.
+
+git log --since="fecha" --until="fecha":
+Muestra los commits realizados en un rango de fechas.
+
+git log -p:
+Muestra los cambios introducidos en cada commit.
+
+git bisect start:
+Inicia una búsqueda binaria para encontrar el commit que introdujo un bug.
+
+git fsck --full:
+Realiza una verificación de integridad del sistema de archivos de Git.
+
+git grep "patrón" $(git rev-list --all):
+Busca un patrón en todos los commits de todas las ramas.
+
+git remote prune origin:
+Elimina las referencias remotas que ya no son válidas en tu repositorio local.
+
+git blame <archivo>:
+Muestra quién modificó cada línea de un archivo y en qué commit.
+
+git cherry -v <rama>:
+Muestra los commits en tu rama que aún no se han aplicado en otra rama.
+
+git reflog:
+Muestra un registro de referencias, útil para recuperar cambios perdidos o deshacer operaciones.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Múltiples Canvas con JS</title>
+</head>
+<body>
+
+<h2>Múltiples Canvas</h2>
+
+<canvas id="canvas1" width="200" height="200" style="border: 1px solid #000;"></canvas>
+<canvas id="canvas2" width="200" height="200" style="border: 1px solid #000;"></canvas>
+<canvas id="canvas3" width="200" height="200" style="border: 1px solid #000;"></canvas>
+
+<script>
+// Obtén los elementos canvas
+var canvas1 = document.getElementById('canvas1');
+var canvas2 = document.getElementById('canvas2');
+var canvas3 = document.getElementById('canvas3');
+
+// Obtén los contextos 2D
+var ctx1 = canvas1.getContext('2d');
+var ctx2 = canvas2.getContext('2d');
+var ctx3 = canvas3.getContext('2d');
+
+// Dibuja en el primer canvas
+ctx1.fillStyle = 'red';
+ctx1.fillRect(10, 10, 50, 50);
+
+// Dibuja en el segundo canvas
+ctx2.fillStyle = 'green';
+ctx2.fillRect(10, 10, 50, 50);
+
+// Dibuja en el tercer canvas
+ctx3.fillStyle = 'blue';
+ctx3.fillRect(10, 10, 50, 50);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Interactivo con jQuery y Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Cuestionario Interactivo</h2>
+        
+        <div id="preguntas">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#respuesta1">
+                            ¿Cuál es la capital de Francia?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="respuesta1" class="collapse" data-parent="#preguntas">
+                    <div class="card-body">
+                        La capital de Francia es París.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#respuesta2">
+                            ¿Cuál es el río más largo del mundo?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="respuesta2" class="collapse" data-parent="#preguntas">
+                    <div class="card-body">
+                        El río más largo del mundo es el río Amazonas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Añade más preguntas si lo deseas -->
+        </div>
+    </div>
+
+</body>
+</html>

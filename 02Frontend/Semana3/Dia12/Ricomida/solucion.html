@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Cabin', sans-serif;
+      }
+
+    /* Estilo personalizado para los indicadores de carrusel */
+    .carousel-indicators {
+      bottom: -30px; /* Ajusta la posición vertical de los indicadores */
+    }
+
+    .carousel-indicators li {
+      list-style: none; /* Elimina el estilo de la lista */
+      display: inline-block; /* Hace que los indicadores estén en línea */
+      margin: 0 2px; /* Añade espacio entre los indicadores */
+    }
+
+    .carousel-indicators li div {
+      width: 10px;
+      height: 10px;
+      background-color: #bbb; /* Color de los indicadores no seleccionados */
+      border-radius: 50%; /* Hace que los indicadores sean círculos */
+    }
+
+    .carousel-indicators .active div {
+      background-color: #333; /* Color del indicador seleccionado */
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #373A3C;">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-family: 'Lobster', sans-serif; color: white; font-size: 37px;">Ricomida</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#" style="color: white;">Inicio</a>
+            <a class="nav-link" href="#" style="color: white;">Recetas</a>
+            <a class="nav-link" href="#" style="color: white;">Nosotros</a>
+            <a class="nav-link disabled" aria-disabled="true" style="color: white;">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <img src="Assets/img/principal.jpg" alt="" style="width: 90%;">
+        </div>
+        <div class="col d-flex flex-column justify-content-center">
+          <div class="d-flex flex-column justify-content-center align-items-start">
+            <div>
+              <h1 class="display-6" style="color: #373A3C; text-align: left;">PIZZA AL ESTILO CHICAGO CON ESPINACAS Y CHAMPIÑONES</h1>
+              <div style="border: 1px solid #000000; margin-bottom: 5px;"></div>
+              <p class="h5" style="color: #373A3C; text-align: left;">110 MIN / 6 A 8 PORCIONES</p>
+            </div>
+            <div>
+
+              <button type="button" data-bs-toggle="modal" data-bs-target="#correoModal" style="border: 1px solid #DDDDDD;">Enviar Correo</button>
+              <div class="modal fade" id="correoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="correoModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content" style="background-color: #d1e7dd; padding: 20px; border: 1px solid #a3cfbb;">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          Correo enviado Exitosamente
+                      </div>
+                  </div>
+              </div>
+
+              <button type="button" data-bs-toggle="modal" data-bs-target="#favoritosModal" style="border: 1px solid #DDDDDD; margin-left: 20px;">Añadir a favoritos</button>
+              <div class="modal fade" id="favoritosModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="favoritosModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content" style="background-color: #ffe5b4; padding: 20px; border: 1px solid #ffbf00;">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          Añadido a favoritos
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container text-center">
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col">
+                <img src="Assets/img/slider-1.png" alt="" style="width: 90%;">
+              </div>
+              <div class="col">
+                <img src="Assets/img/slider-2.png" alt="" style="width: 90%;">
+              </div>
+              <div class="col">
+                <img src="Assets/img/slider-3.png" alt="" style="width: 90%;">
+              </div>
+              <div class="col">
+                <img src="Assets/img/slider-4.png" alt="" style="width: 90%;">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col">
+                <img src="Assets/img/slider-5.png" alt="" style="width: 90%;">
+              </div>
+              <div class="col"> 
+                <img src="Assets/img/slider-6.png" alt="" style="width: 90%;">
+              </div>
+              <div class="col">
+                <img src="Assets/img/slider-7.png" alt="" style="width: 90%;">
+              </div>
+              <div class="col">
+                <img src="Assets/img/slider-8.png" alt="" style="width: 90%;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <ol class="carousel-indicators">
+          <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"><div></div></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="1"><div></div></li>
+        </ol>
+      </div>
+    </div>
+    <br>
+    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+    <br>
+
+    <div class="container text-center">
+      <div class="row">
+
+        <div class="collapse collapse-horizontal" id="IngredientesyRecetas1">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">INGREDIENTES</h5>
+                    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+                    <p class="card-text">Para los panqueques:
+
+                      1 taza de harina de trigo
+                      2 cucharadas de azúcar
+                      1 cucharadita de polvo de hornear
+                      1/4 cucharadita de sal
+                      1 huevo
+                      3/4 taza de leche
+                      2 cucharadas de mantequilla derretida
+                      1 cucharadita de extracto de vainilla
+                      Para el relleno:
+                      
+                      Manjar (dulce de leche) al gusto
+                      Para la crema:
+                      
+                      1 taza de crema para batir
+                      2 cucharadas de azúcar en polvo
+                      1 cucharadita de extracto de vainilla</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">PREPARACION</h5>
+                    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+                    <p class="card-text">En un tazón grande, mezcla la harina, el azúcar, el polvo de hornear y la sal.
+
+                      En otro tazón, bate el huevo y luego agrega la leche, la mantequilla derretida y el extracto de vainilla. Mezcla bien.
+                      
+                      Vierte los ingredientes líquidos sobre los ingredientes secos y revuelve hasta que la masa esté suave. No mezcles en exceso para evitar que los panqueques queden duros.
+                      
+                      Calienta una sartén antiadherente a fuego medio y engrásala ligeramente con mantequilla o aceite en aerosol.
+                      
+                      Vierte un poco de masa en la sartén caliente, usando aproximadamente 1/4 de taza por panqueque. Cocina hasta que aparezcan burbujas en la superficie y los bordes estén ligeramente dorados, luego voltea y cocina por el otro lado hasta que estén dorados.
+                      
+                      Repite con el resto de la masa hasta que hayas hecho todos los panqueques.
+                      
+                      Para hacer la crema, bate la crema para batir con el azúcar en polvo y el extracto de vainilla hasta que se formen picos suaves.
+                      
+                      Para armar los panqueques, coloca un panqueque en un plato, agrega una capa de manjar (dulce de leche) y luego coloca otro panqueque encima. Repite si deseas más capas.
+                      
+                      Cubre los panqueques con crema batida y sirve.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse collapse-horizontal" id="IngredientesyRecetas2">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">INGREDIENTES</h5>
+                    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+                    <p class="card-text">3 huevos separados (yemas y claras)
+                      1 taza de queso mascarpone (aproximadamente 8 oz)
+                      1/2 taza de azúcar
+                      1 cucharadita de extracto de vainilla
+                      2 tazas de café espresso fuerte, enfriado
+                      2 cucharadas de licor de café o ron (opcional)
+                      24-30 bizcochos de soletilla (ladyfingers)
+                      Cacao en polvo para espolvorear
+                      Chocolate amargo rallado (opcional, para decorar)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">PREPARACION</h5>
+                    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+                    <p class="card-text">En un tazón grande, bate las yemas de huevo con el azúcar hasta que la mezcla esté espesa y de color claro.
+
+                      Agrega el queso mascarpone y la vainilla a la mezcla de yemas de huevo y azúcar. Mezcla hasta que esté suave y bien combinado. Reserva.
+                      
+                      En otro tazón limpio, bate las claras de huevo con una pizca de sal hasta que se formen picos suaves.
+                      
+                      Con movimientos suaves y envolventes, incorpora las claras de huevo batidas a la mezcla de mascarpone hasta que estén completamente integradas. Ten cuidado de no mezclar en exceso para no perder la ligereza de las claras batidas.
+                      
+                      En un plato poco profundo, mezcla el café espresso con el licor de café o ron, si estás usando alguno.
+                      
+                      Sumerge rápidamente los bizcochos de soletilla en la mezcla de café y licor y colócalos en el fondo de un molde para servir o una fuente de vidrio, creando una capa uniforme.
+                      
+                      Cubre los bizcochos con una capa de la mezcla de mascarpone.
+                      
+                      Repite el proceso, alternando capas de bizcochos y mezcla de mascarpone, hasta que hayas utilizado todos los ingredientes, terminando con una capa de mascarpone.
+                      
+                      Cubre el tiramisú con film transparente y refrigéralo durante al menos 4 horas, o preferiblemente durante la noche, para que los sabores se mezclen y los bizcochos se ablanden.
+                      
+                      Antes de servir, espolvorea generosamente con cacao en polvo y, si lo deseas, decora con chocolate amargo rallado.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse collapse-horizontal" id="IngredientesyRecetas3">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">INGREDIENTES</h5>
+                    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+                    <p class="card-text">1 pieza de plateada de aproximadamente 1,5 a 2 kg
+                      Sal al gusto
+                      Pimienta negra molida al gusto
+                      3 dientes de ajo picados
+                      2 cucharadas de aceite de oliva
+                      1 cebolla grande, cortada en rodajas
+                      2 zanahorias grandes, peladas y cortadas en trozos grandes
+                      2 tallos de apio, cortados en trozos grandes
+                      2 tazas de caldo de carne o agua</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">PREPARACION</h5>
+                    <div style="border: 1px solid #000000; margin-bottom: 5px; width: 90%; margin-left: auto; margin-right: auto;"></div>
+                    <p class="card-text">Precalienta el horno a 160°C (320°F).
+
+                      Haz pequeños cortes en la superficie de la plateada con un cuchillo afilado. Esto ayudará a que los sabores penetren en la carne.
+                      
+                      En un tazón pequeño, mezcla el ajo picado, el aceite de oliva, la sal y la pimienta. Unta esta mezcla por todos lados de la plateada.
+                      
+                      Calienta una sartén grande a fuego medio-alto. Agrega un poco de aceite si es necesario. Sella la plateada por todos lados hasta que esté dorada.
+                      
+                      Retira la plateada de la sartén y colócala en una bandeja para hornear.
+                      
+                      En la misma sartén, agrega las rodajas de cebolla, zanahorias y apio. Cocina por unos minutos hasta que estén ligeramente dorados.
+                      
+                      Coloca las verduras alrededor de la plateada en la bandeja para hornear.
+                      
+                      Vierte el caldo de carne o agua en la bandeja, cuidando de no mojar la carne. El líquido ayudará a mantener la humedad durante la cocción.
+                      
+                      Cubre la bandeja para hornear con papel de aluminio.
+                      
+                      Hornea la plateada en el horno precalentado durante aproximadamente 3-4 horas, o hasta que esté tierna y se pueda desmenuzar fácilmente con un tenedor. Durante la cocción, puedes revisar ocasionalmente y agregar más líquido si es necesario para evitar que se seque.
+                      
+                      Una vez lista, retira la plateada del horno y déjala reposar durante unos minutos antes de cortarla en rodajas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card h-100" type="button" data-bs-toggle="collapse" data-bs-target="#IngredientesyRecetas1" aria-expanded="false" aria-controls="collapseWidthExample">
+            <img src="Assets/img/recipe-card-1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">PANQUEQUES CON MANJAR Y CREMA</h5>
+              <p class="card-text">Mus enim elementum dignissim class eleifend justo, ut nunc magnis est vulputate nostra, blandit erat luctus faucibus orci.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" type="button" data-bs-toggle="collapse" data-bs-target="#IngredientesyRecetas2" aria-expanded="false" aria-controls="collapseWidthExample">
+            <img src="Assets/img/recipe-card-2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">TIRAMISÚ</h5>
+              <p class="card-text">Congue fermentum dignissim rhoncus elementum ac nisi, proin phasellus lacinia sed faucibus mauris, taciti scelerisque nulla ornare consequat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100" type="button" data-bs-toggle="collapse" data-bs-target="#IngredientesyRecetas3" aria-expanded="false" aria-controls="collapseWidthExample">
+            <img src="Assets/img/recipe-card-3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">PLATEADA</h5>
+              <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet ac eleifend risus, urna auctor inceptos mattis dapibus..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    <div style="background-color: #DC3545; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px;">
+      <h3 style="color: white;">SUSCRÍBETE EN NUESTRO NEWSLETTER</h3>
+      <h3 style="color: white;">y obtén las mejores recetas que tenemos en <span style="font-family: 'Lobster', sans-serif;">Ricomida</span></h3>
+      <br>
+      <button type="button" class="btn btn-outline-light">Empezar</button>
+      <br>
+    </div>      
+    <ul class="nav justify-content-center" style="background-color: #373A3C;">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#" style="font-family: 'Lobster', sans-serif; color: white; font-size: 37px;">Ricomida</a>
+      </li>
+    </ul>
+
+<!-- 
+    <nav class="navbar navbar-expand-lg" style="background-color: #373A3C;">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-family: 'Lobster', sans-serif; color: white; font-size: 37px;">Ricomida</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#" style="color: white;">Inicio</a>
+            <a class="nav-link" href="#" style="color: white;">Recetas</a>
+            <a class="nav-link" href="#" style="color: white;">Nosotros</a>
+            <a class="nav-link disabled" aria-disabled="true" style="color: white;">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

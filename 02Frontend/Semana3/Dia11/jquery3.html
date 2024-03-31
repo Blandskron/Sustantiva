@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa con jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .nav-menu {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            padding: 10px;
+            background-color: #f2f2f2;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-toggle">☰ Menú</div>
+    <ul class="nav-menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            $(".menu-toggle").click(function(){
+                $(".nav-menu").slideToggle();
+            });
+        });
+    </script>
+
+</body>
+</html>

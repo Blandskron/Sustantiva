@@ -1,0 +1,47 @@
+python -m venv hello
+cd hello
+Scripts\activate
+pip install django
+pip freeze
+django-admin startproject helloworld
+cd helloworld
+python manage.py startapp myhelloapp
+# en settings.py agregaremos nuestra app
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myhelloapp',
+]
+python manage.py makemigrations myhelloapp
+# modificar view.py
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    return HttpResponse('Hola mundo, hola Django')
+
+# Creando urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index),
+]
+
+# Modificar urls.py  
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('myhelloapp.urls'))
+]
+
+python manage.py migrate
+
+python manage.py runserver

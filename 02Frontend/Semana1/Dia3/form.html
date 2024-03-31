@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Completo</title>
+</head>
+<body>
+
+    <h1>Formulario de Registro</h1>
+    <form action="#" method="post">
+        <!-- Texto -->
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <!-- Contraseña -->
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <!-- Número -->
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="0" max="100"><br>
+
+        <!-- Rango -->
+        <label for="experiencia">Años de Experiencia:</label><br>
+        <input type="range" id="experiencia" name="experiencia" min="0" max="30"><br>
+
+        <!-- Fecha -->
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
+
+        <!-- Teléfono -->
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono"><br>
+
+        <!-- Select -->
+        <label for="pais">País:</label><br>
+        <select id="pais" name="pais">
+            <option value="espana">España</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+            <!-- Más opciones aquí -->
+        </select><br>
+
+        <!-- Radio Button -->
+        <label>Género:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label><br>
+
+        <!-- Checkbox -->
+        <label for="terminos">Acepto los términos y condiciones</label>
+        <input type="checkbox" id="terminos" name="terminos"><br>
+
+        <!-- Textarea -->
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br>
+
+        <!-- Botones -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+
+</body>
+</html>

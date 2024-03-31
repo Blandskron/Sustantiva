@@ -1,0 +1,32 @@
+# Windows
+python --version
+python -m pip install --upgrade pip
+cd\ --solo en caso de moverse entre carpetas
+mkdir ProyectoDjango
+cd ProyectoDjango
+python -m venv miproyecto
+miproyecto\Scripts\activate
+Deactivate
+rd /s miproyecto (o bien) Remove-Item -Path ".\miproyecto" -Recurse -Force
+
+#OPCIONAL
+cd ProyectoDjango
+miproyecto\Scripts\activate
+django-admin startproject nombre_proyecto
+
+
+# Linux / macOS
+python3 --version
+python3 -m pip install --upgrade pip
+cd --solo en caso de moverse entre carpetas
+mkdir ProyectoDjango
+cd ProyectoDjango
+python3 -m venv miproyecto
+source miproyecto/bin/activate
+Deactivate
+rm -rf miproyecto
+
+#OPCIONAL
+cd ProyectoDjango
+source miproyecto/bin/activate
+django-admin startproject nombre_proyecto

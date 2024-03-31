@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Modo Nocturno a Modo Día con jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Estilos para el modo día */
+        body.day-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Estilos para el modo noche */
+        body.night-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Estilos para el botón de cambio de modo */
+        .mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 5px;
+            background-color: #ddd;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="day-mode">
+
+    <button class="mode-toggle">Cambiar Modo</button>
+
+    <p>Bienvenido a mi página web</p>
+
+    <script>
+        $(document).ready(function(){
+            $(".mode-toggle").click(function(){
+                $("body").toggleClass("night-mode day-mode");
+            });
+        });
+    </script>
+
+</body>
+</html>
